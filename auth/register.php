@@ -43,28 +43,40 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Register</title>
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
-    <h2>Register</h2>
+    <nav class="navbar">
+        <a href="../index.php" class="brand">🛒 My Shop</a>
+        <div class="nav-links">
+            <a href="login.php">Login</a>
+        </div>
+    </nav>
 
-    <?php foreach ($errors as $error): ?>
-        <p style="color:red;"><?= htmlspecialchars($error) ?></p>
-    <?php endforeach; ?>
+    <div class="auth-box">
+        <h2>Create Account</h2>
 
-    <form method="POST">
-        <input type="text" name="name" placeholder="Name" value="<?= htmlspecialchars($name) ?>"><br><br>
-        <input type="email" name="email" placeholder="Email" value="<?= htmlspecialchars($email) ?>"><br><br>
-        <input type="password" name="password" placeholder="Password"><br><br>
-        <input type="password" name="confirm_password" placeholder="Confirm Password"><br><br>
-        <button type="submit">Register</button>
-    </form>
+        <?php foreach ($errors as $error): ?>
+            <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
+        <?php endforeach; ?>
 
-    <p>Already account hai? <a href="login.php">Login</a></p>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Full Name" value="<?= htmlspecialchars($name) ?>">
+            <input type="email" name="email" placeholder="Email" value="<?= htmlspecialchars($email) ?>">
+            <input type="password" name="password" placeholder="Password">
+            <input type="password" name="confirm_password" placeholder="Confirm Password">
+            <button type="submit" class="btn btn-full">Register</button>
+        </form>
+
+        <p class="auth-link">Already account hai? <a href="login.php">Login</a></p>
+    </div>
 </body>
 
 </html>

@@ -31,30 +31,42 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
-    <h2>Login</h2>
+    <nav class="navbar">
+        <a href="../index.php" class="brand">🛒 My Shop</a>
+        <div class="nav-links">
+            <a href="register.php">Register</a>
+        </div>
+    </nav>
 
-    <?php if (isset($_GET["registered"])): ?>
-        <p style="color:green;">Registration successful! Ab login karo.</p>
-    <?php endif; ?>
+    <div class="auth-box">
+        <h2>Welcome Back</h2>
 
-    <?php foreach ($errors as $error): ?>
-        <p style="color:red;"><?= htmlspecialchars($error) ?></p>
-    <?php endforeach; ?>
+        <?php if (isset($_GET["registered"])): ?>
+            <div class="alert alert-success">Registration successful! Ab login karo.</div>
+        <?php endif; ?>
 
-    <form method="POST">
-        <input type="email" name="email" placeholder="Email" value="<?= htmlspecialchars($email) ?>"><br><br>
-        <input type="password" name="password" placeholder="Password"><br><br>
-        <button type="submit">Login</button>
-    </form>
+        <?php foreach ($errors as $error): ?>
+            <div class="alert alert-error"><?= htmlspecialchars($error) ?></div>
+        <?php endforeach; ?>
 
-    <p>Account nahi hai? <a href="register.php">Register</a></p>
+        <form method="POST">
+            <input type="email" name="email" placeholder="Email" value="<?= htmlspecialchars($email) ?>">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit" class="btn btn-full">Login</button>
+        </form>
+
+        <p class="auth-link">Account nahi hai? <a href="register.php">Register</a></p>
+    </div>
 </body>
 
 </html>
