@@ -146,3 +146,49 @@ a:hover { text-decoration: underline; }
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 .empty-box p { margin-bottom: 18px; color: var(--muted); }
+
+/* ---------- Checkout ---------- */
+.checkout-box {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    max-width: 600px;
+}
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+.checkout-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 18px 0;
+    color: var(--green);
+}
+.success-box {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    max-width: 500px;
+    margin: 40px auto;
+}
+.success-box .tick { font-size: 60px; }
+.success-box p { color: var(--muted); margin: 10px 0 20px; }
+
+/* ---------- Admin ---------- */
+.admin-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.admin-top .page-title { margin-bottom: 0; }
+.actions { display: flex; gap: 8px; align-items: center; }
+.btn-edit { background: #0ea5e9; }
+.btn-edit:hover { background: #0284c7; text-decoration: none; }
