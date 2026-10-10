@@ -192,3 +192,28 @@ a:hover { text-decoration: underline; }
 .actions { display: flex; gap: 8px; align-items: center; }
 .btn-edit { background: #0ea5e9; }
 .btn-edit:hover { background: #0284c7; text-decoration: none; }
+
+
+/* ---------- Admin Form ---------- */
+.form-box {
+    max-width: 520px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.form-box h2 { margin-bottom: 20px; }
+.form-box label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 14px; }
+.form-box input[type="text"],
+.form-box input[type="number"],
+.form-box textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+}
+.form-box input[type="file"] { margin-bottom: 20px; }

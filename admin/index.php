@@ -10,6 +10,10 @@ if (!isset($_SESSION["user_id"]) || ($_SESSION["role"] ?? "") !== "admin") {
 $message = "";
 $error = "";
 
+if (isset($_GET["added"])) {
+    $message = "Product add ho gaya.";
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST" && ($_POST["action"] ?? "") === "delete") {
     $id = (int)($_POST["product_id"] ?? 0);
 
